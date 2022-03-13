@@ -1,4 +1,4 @@
-package com.kamesh.usellup;
+package com.kamesh.usellup.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,15 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import com.kamesh.usellup.R;
 
 public class ProductAdapter extends BaseAdapter {
 
     private Context c;
-    ProductAdapter(Context context){
+    public ProductAdapter(Context context){
         this.c = context;
     }
 
