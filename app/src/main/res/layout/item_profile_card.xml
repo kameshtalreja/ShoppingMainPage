@@ -18,8 +18,8 @@
             android:id="@+id/tvPersonName"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:paddingHorizontal="5dp"
             android:layout_alignParentBottom="true"
+            android:paddingHorizontal="5dp"
             tools:text="profile 1" />
     </RelativeLayout>
 </RelativeLayout>

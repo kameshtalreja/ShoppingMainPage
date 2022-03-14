@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white2"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/usellup"
+                android:layout_gravity="center_vertical" />
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:hint="@string/search"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="105dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@android:drawable/ic_menu_info_details"/>
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@android:drawable/stat_sys_vp_phone_call_on_hold"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@android:drawable/presence_audio_online"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!-- Headers -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header1"
+                    android:textSize="20sp"
+                    android:paddingVertical="4dp"
+                    />
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header2"
+                    android:textSize="20sp"
+                    android:paddingVertical="4dp"
+                    />
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header3"
+                    android:textSize="20sp"
+                    android:paddingVertical="4dp"
+                    />
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header4"
+                    android:textSize="20sp"
+                    android:paddingVertical="4dp"
+                    />
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header5"
+                    android:textSize="20sp"
+                    android:paddingVertical="4dp"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <!-- View Pager Images-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp" />
+
+        <!-- Best practice Title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingHorizontal="10dp"
+
+            android:background="@color/white3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/best_pratice"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:textSize="15sp"
+                android:background="@drawable/shape_button"
+                android:text="@string/shop"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <!-- Main Categories -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCategory"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layoutDirection="rtl"
+            android:layout_marginVertical="10dp" />
+
+
+        <!-- BEST TITLE  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/best_title"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="center_vertical" />
+
+
+        <!-- Best Title Products -->
+        <GridView
+            android:id="@+id/gridViewProducts"
+            android:layout_width="match_parent"
+            android:layout_height="660dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:numColumns="3" />
+
+        <!-- Profile List -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/top_title"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="center_vertical"
+            android:background="@color/lightDarkBackground"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProfiles"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingVertical="10dp"
+            android:layoutDirection="rtl"
+            android:background="@color/white"/>
+
+
+        <!-- Shop by category -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/lightDarkBackground">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/shop_by_category"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingStart="10dp"
+                android:gravity="center_vertical" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/view_all"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp" />
+
+        </LinearLayout>
+
+
+        <!-- Main Sub Categories -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layoutDirection="rtl"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
